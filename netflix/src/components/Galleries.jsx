@@ -27,7 +27,7 @@ class Galleries extends Component {
             movies: data.Search,
           },
         });
-        console.log(this.state.movies);
+        console.log("from the fetch", this.state.movies);
       } else {
         console.log("inside the else of Fetch");
       }

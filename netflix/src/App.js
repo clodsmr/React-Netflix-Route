@@ -9,6 +9,7 @@ import MyFooter from "./components/MyFooter";
 import Search from "./components/Search";
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import MovieDetails from "./components/MovieDetails";
 
 class App extends React.Component {
   state = {
@@ -21,9 +22,7 @@ class App extends React.Component {
        {/*   <Link to="/details/123123"> try this out</Link>  */}
             <Switch>
             <Route path="/details/:asin"> 
-            <div>
-              did it!
-            </div>
+            <MovieDetails />
             </Route>
             <Route path="/">
               <Navbarr
