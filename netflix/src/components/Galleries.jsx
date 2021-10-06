@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import {  Link } from "react-router-dom";
 
 class Galleries extends Component {
   state = {
@@ -27,7 +27,7 @@ class Galleries extends Component {
             movies: data.Search,
           },
         });
-        console.log(this.state.movies.movies.Search);
+        console.log(this.state.movies);
       } else {
         console.log("inside the else of Fetch");
       }
@@ -57,13 +57,13 @@ class Galleries extends Component {
                   Key={m.imdbID}
                   className="card-gallery card-text-area position-relative"
                 >
-                  <img class="img-fluid rounded" src={m.Poster} alt="" />
+                  <Link to={"/details/" + m.imdbID} > <img class="img-fluid rounded" src={m.Poster} alt="" /> </Link>
                   <div class="infos-container">
                     <div class="infos-content">
                       <div class="d-flex align-items-center mb-3">
                         <div class="play-btn gradient"></div>
                         <div class="circul-btn ml-2">
-                          <div class="plus-btn ml-2 mt-2"></div>
+                         <Link> <div class="plus-btn ml-2 mt-2"></div> </Link>
                         </div>
                         <div class="circul-btn ml-2">
                           <svg
